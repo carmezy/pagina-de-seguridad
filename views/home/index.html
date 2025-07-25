@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Support - Ciberseguridad</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+    <button class="nav-toggle" aria-label="Abrir menú">&#9776;</button>
+            <ul>
+                <li><a href="#inicio">inicio</a></li>
+                <li><a href="#servicios">servicios</a></li>
+                <li><a href="#aprende">aprende</a></li>
+                <li><a href="#nosotros">acerca de nosotros</a></li>
+                <li><a href="../login/index.html" class="nav-button">login</a></li>
+                <li><a href="../signup/index.html" class="nav-button">sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <video src="../../video/video1.mp4" autoplay muted loop class="hero-bg-video"></video>
+            <div class="hero-content">
+                <p>bienvenido a</p>
+                <h1>black support</h1>
+            </div>
+        </section>
+
+        <section class="carousel-section">
+            <h2>Nuestras Soluciones Tecnológicas</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="../../img/circles-6928543_1280.jpg" alt="Tecnología 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../../img/internet-3484137_1280.jpg" alt="Tecnología 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../../img/man-5946820_1280.jpg" alt="Tecnología 3">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="company-intro">
+            <p>compañia de seguridad informática venezolana, de fácil comprensión, para todo tipo de personas</p>
+            <p class="call-to-action">revise nuestra gran gama de servicios y precios para su comodidad</p>
+        </section>
+
+        <section class="programs-section">
+            <h2>programas a ofrecer</h2>
+            <div class="program-cards">
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/CrowdStrike_Logo.svg/2048px-CrowdStrike_Logo.svg.png" alt="Crowdstrike">
+                    <h3>Crowdstrike</h3>
+                </div>
+                <div class="card">
+                    <img src="https://yt3.googleusercontent.com/ytc/AGIKg_5_1j9P5iVwPq0t7Wc3J0wXlM4b_V-K5k8Q0Gk7=s900-c-k-c0x00ffffff-no-rj" alt="Check Point Infinity SOC">
+                    <h3>Check Point Infinity SOC</h3>
+                </div>
+                <div class="card">
+                    <img src="https://securex.com/wp-content/uploads/2021/03/SecureX-Logo-Dark.png" alt="SecureX">
+                    <h3>SecureX</h3>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Splunk_logo.svg/1200px-Splunk_logo.svg.png" alt="Splunk">
+                    <h3>Splunk</h3>
+                </div>
+                <div class="card">
+                    <img src="https://logos-world.net/wp-content/uploads/2022/01/LastPass-Logo.png" alt="LastPass">
+                    <h3>LastPass</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+
+        function showSlides() {
+            slides.forEach((slide, i) => {
+                slide.style.display = 'none';
+            });
+            slideIndex++;
+            if (slideIndex > totalSlides) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        showSlides();
+    </script>
+</body>
+</html>
