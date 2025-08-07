@@ -74,30 +74,6 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 800px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: flex-start;
-        background: #1a1a1a;
-        position: absolute;
-        top: 60px;
-        right: 0; /* Alineado a la derecha */
-        width: 100%;
-        display: none;
-        padding-bottom: 20px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .navbar ul.open {
-        display: flex;
-    }
-    .navbar ul li {
-        margin: 15px 0 0 20px;
-    }
-    .navbar .nav-toggle {
-        display: block;
-    }
-}
-
 .hero-section {
     position: relative;
     color: white;
@@ -136,12 +112,6 @@ body {
     margin: 0;
     color: #ffd700;
 }
-
-
-
-
-
-
 
 .company-intro {
     font-size: 30px;
@@ -199,16 +169,16 @@ body {
 }
 
 .card {
-    background-color: #ffd900; 
+    background-color: #ffd900;
     border-radius: 10px;
     border: 1px solid #e0e0e0; /* Light gray border */
     font-family: Arial, sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    /* width: 450px; <-- Se elimina el ancho fijo */
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .card-header {
@@ -240,7 +210,7 @@ body {
     font-family: Arial, sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 450px;
+    /* width: 450px; <-- Se elimina el ancho fijo */
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease;
@@ -313,11 +283,6 @@ body {
   background-color: #0056b3; /* Darker blue on hover */
   border-color: #0056b3;
 }
-
-
-
-
-
 
 .carousel-section {
     display: flex;
@@ -418,6 +383,105 @@ body {
     margin-bottom: 15px;
 }
 
-.card {
-    cursor: pointer;
+/* --- Responsive Design --- */
+
+/* Tablets */
+@media (max-width: 800px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        background: #1a1a1a;
+        position: absolute;
+        top: 60px;
+        right: 0; /* Alineado a la derecha */
+        width: 100%;
+        display: none;
+        padding-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .navbar ul.open {
+        display: flex;
+    }
+    .navbar ul li {
+        margin: 15px 0 0 20px;
+    }
+    .navbar .nav-toggle {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+
+    .company-intro {
+        font-size: 24px;
+        padding: 40px 20px;
+    }
+
+    .programs-section h2, .linea2 {
+        font-size: 30px;
+    }
+
+    .program-cards {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .hero-section {
+        padding: 80px 20px;
+        height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .company-intro {
+        font-size: 18px;
+        padding: 30px 15px;
+    }
+
+     .company-intro p {
+        font-size: 16px;
+    }
+
+    .programs-section h2, .linea2 {
+        font-size: 24px;
+    }
+
+    .program-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-item img {
+        height: 200px;
+    }
+
+    .modal-contenido {
+        padding: 20px;
+        width: 95%;
+    }
 }
