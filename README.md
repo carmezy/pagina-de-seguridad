@@ -1,31 +1,56 @@
-# Todo_completo
-🚀 Gestor de Tareas Fullstack
-¡Bienvenido al repositori! Esta aplicación completa te permite organizar tu día a día de forma eficiente, creando, gestionando y eliminando tareas con facilidad. Construida con el robusto stack (MongoDB, Express.js, Node.js), ofrece una experiencia de usuario fluida y una arquitectura escalable.
+# Proyecto de Ciberseguridad
 
-✨ Características Destacadas
-Autenticación de Usuarios: Registro y login seguro para que cada usuario tenga su espacio personal de tareas.
-Creación de Tareas: Añade nuevas tareas a tu lista con un solo clic.
-Gestión de Estado: Marca tareas como completadas (checked) para un seguimiento claro de tu progreso.
-Edición de Tareas: Actualiza el contenido de tus tareas existentes.
-Eliminación de Tareas: Borra tareas que ya no necesites.
-Persistencia de Datos: Todas tus tareas se guardan de forma segura en una base de datos MongoDB.
-Diseño Responsivo: Disfruta de una experiencia consistente en dispositivos de escritorio y móviles.
+Este es un proyecto de una página web para una empresa de ciberseguridad. La página cuenta con un backend y un frontend.
 
-🛠️ Tecnologías Utilizadas
-Este proyecto está construido con las siguientes tecnologías modernas:
-Frontend 
-Tailwind CSS: Framework CSS utility-first para un diseño rápido y personalizable.
-Axios: Cliente HTTP basado en promesas para hacer solicitudes a la API.
+## Descripción
 
-Backend (Node.js & Express.js):
-Node.js: Entorno de ejecución de JavaScript del lado del servidor.
-Express.js: Framework web minimalista para Node.js, para construir APIs robustas.
-Mongoose: Modelado de objetos MongoDB para Node.js, para interactuar con la base de datos.
-JWT (JSON Web Tokens): Para autenticación segura y autorización.
-Bcrypt: Para el hashing seguro de contraseñas.
+El proyecto consiste en una aplicación web que ofrece servicios de ciberseguridad. Los usuarios pueden registrarse, iniciar sesión y contratar diferentes planes de seguridad.
 
-Base de Datos:
-MongoDB: Base de datos NoSQL flexible y escalable.
+## Frontend
 
+El frontend está construido con HTML, CSS y JavaScript, utilizando Tailwind CSS para los estilos. Las vistas se encuentran en el directorio `views`.
 
-Autores: Pakita y Gustavo
+## Backend
+
+El backend está desarrollado con Node.js y Express. Utiliza MongoDB como base de datos. El backend proporciona una API REST para la autenticación de usuarios, la gestión de servicios y otras funcionalidades.
+
+## Dependencias
+
+El proyecto utiliza las siguientes dependencias:
+
+- **express**: Framework web para Node.js.
+- **mongoose**: Herramienta de modelado de objetos de MongoDB.
+- **jsonwebtoken**: Para la creación y verificación de JSON Web Tokens.
+- **bcrypt**: Para el hash de contraseñas.
+- **cookie-parser**: Para el manejo de cookies.
+- **cors**: Para habilitar el Cross-Origin Resource Sharing.
+- **morgan**: Para el registro de solicitudes HTTP.
+- **dotenv**: Para cargar variables de entorno desde un archivo `.env`.
+- **nodemailer**: Para el envío de correos electrónicos.
+- **nodemon**: Para reiniciar automáticamente el servidor durante el desarrollo.
+- **cross-env**: Para establecer variables de entorno en diferentes plataformas.
+- **tailwindcss**: Para la creación de interfaces de usuario personalizadas.
+
+## Cómo ejecutar el proyecto
+
+1. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
+
+2. **Construir Tailwind CSS:**
+   ```bash
+   npm run tailwind-build
+   ```
+
+3. **Ejecutar en modo de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Ejecutar en modo de producción:**
+   ```bash
+   npm run start
+   ```
+
+   pagina creada por gustavo rodriguez
