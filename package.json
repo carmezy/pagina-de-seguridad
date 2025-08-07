@@ -1,10 +1,10 @@
 {
-  "name": "backend-todoapp",
+  "name": "backend-ciberseguridad",
   "version": "1.0.0",
   "main": "index.js",
  "scripts": {
     "tailwind-build": "npx tailwindcss -i ./input.css -o ./views/styles/output.css --watch",
-    "start":  "NODE_ENV=production node index.js",
+    "start":  "cross-env NODE_ENV=production node index.js",
     "dev": "cross-env NODE_ENV=dev nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

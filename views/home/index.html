@@ -7,20 +7,6 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-    <button class="nav-toggle" aria-label="Abrir menú">&#9776;</button>
-            <ul>
-                <li><a href="#inicio">inicio</a></li>
-                <li><a href="#servicios">servicios</a></li>
-                <li><a href="#aprende">aprende</a></li>
-                <li><a href="#nosotros">acerca de nosotros</a></li>
-                <li><a href="../login/index.html" class="nav-button">login</a></li>
-                <li><a href="../signup/index.html" class="nav-button">sign up</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
         <section class="hero-section">
             <video src="../../video/video1.mp4" autoplay muted loop class="hero-bg-video"></video>
@@ -30,75 +16,102 @@
             </div>
         </section>
 
-        <section class="carousel-section">
-            <h2>Nuestras Soluciones Tecnológicas</h2>
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="../../img/circles-6928543_1280.jpg" alt="Tecnología 1">
-                </div>
-                <div class="carousel-slide">
-                    <img src="../../img/internet-3484137_1280.jpg" alt="Tecnología 2">
-                </div>
-                <div class="carousel-slide">
-                    <img src="../../img/man-5946820_1280.jpg" alt="Tecnología 3">
-                </div>
-            </div>
-
-        </section>
-
         <section class="company-intro">
-            <p>compañia de seguridad informática venezolana, de fácil comprensión, para todo tipo de personas</p>
-            <p class="call-to-action">revise nuestra gran gama de servicios y precios para su comodidad</p>
+            <p>Somos una compañia de seguridad informática venezolana, de fácil comprensión, para todos</p>
+            <a class="call-to-action" href="../servicios/index.html">
+        revise nuestra gran gama de servicios y precios para su comodidad
+    </a>
         </section>
 
-        <section class="programs-section">
+        <section class="carousel-section">
+            <h2 class="linea2">Somos Soluciones Tecnológicas</h2>
+           <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../img/circles-6928543_1280.jpg " class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../../img/internet-3484137_1280.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../../img/man-5946820_1280.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+        </section>
+
+        <section class="programs-section-2">
+            
             <h2>programas a ofrecer</h2>
-            <div class="program-cards">
-                <div class="card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/CrowdStrike_Logo.svg/2048px-CrowdStrike_Logo.svg.png" alt="Crowdstrike">
-                    <h3>Crowdstrike</h3>
+            <div class="program-cards"
+            >
+                
+                <div class="card"   
+                data-titulo="tenable"
+                data-descripcion-larga="Tenable Vulnerability Management y Tenable Security Center son soluciones líderes de gestión de vulnerabilidades que le ofrecen una visión completa de todos los activos y vulnerabilidades de su red para poder comprender el riesgo cibernético y saber qué vulnerabilidades se deben reparar primero.">
+                    <img src="../../img/cstisa+-+tenable+color-640w.webp" alt="tenable">
+                    <h3>Tenable</h3>
                 </div>
-                <div class="card">
-                    <img src="https://yt3.googleusercontent.com/ytc/AGIKg_5_1j9P5iVwPq0t7Wc3J0wXlM4b_V-K5k8Q0Gk7=s900-c-k-c0x00ffffff-no-rj" alt="Check Point Infinity SOC">
-                    <h3>Check Point Infinity SOC</h3>
+                <div class="card" data-titulo="Proton mail" data-descripcion-larga="Proton Mail es un servicio de correo electrónico cifrado de extremo a extremo que protege el contenido de los correos y los datos del usuario antes de que se envíen a los servidores.">
+                    <img src="../../img/descarga.avif" alt="Proton-mail">
+                    <h3>Proton mail</h3>
                 </div>
-                <div class="card">
-                    <img src="https://securex.com/wp-content/uploads/2021/03/SecureX-Logo-Dark.png" alt="SecureX">
-                    <h3>SecureX</h3>
+                <div class="card" data-titulo="Avast" data-descripcion-larga="Avast Antivirus es una familia de aplicaciones de seguridad de Internet multiplataforma que ofrece seguridad informática, seguridad del navegador, software antivirus, cortafuegos, antiphishing, antispyware y antispam, entre otros servicios.">
+                    <img src="../../img/logo_avast.jpg" alt="avast">
+                    <h3>Avast</h3>
                 </div>
-                <div class="card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Splunk_logo.svg/1200px-Splunk_logo.svg.png" alt="Splunk">
-                    <h3>Splunk</h3>
+                <div class="card" data-titulo="Norton" data-descripcion-larga="Norton AntiVirus es un producto de software antivirus o antimalware que utiliza firmas y heurística para identificar virus. Otras características incluidas son el filtrado de correo no deseado y la protección contra phishing.">
+                    <img src="../../img/image_norton_logo_yellow_bg_mobile_2x.avif" alt="Norton">
+                    <h3>Norton</h3>
                 </div>
-                <div class="card">
-                    <img src="https://logos-world.net/wp-content/uploads/2022/01/LastPass-Logo.png" alt="LastPass">
-                    <h3>LastPass</h3>
+                <div class="card" data-titulo="Kaspersky" data-descripcion-larga="Kaspersky Anti-Virus es un programa antivirus diseñado para proteger a los usuarios de malware y está diseñado principalmente para ordenadores con Microsoft Windows y macOS.">
+                    <img src="../../img/kaspersky-rebranding-in-details-featured.jpg" alt="Kaspersky">
+                    <h3>Kaspersky</h3>
+                </div>
+                <div class="card" data-titulo="Eset" data-descripcion-larga="ESET es una empresa de seguridad en Internet que ofrece productos antivirus y cortafuegos. ESET tiene su sede en Bratislava, Eslovaquia.">
+                    <img src="../../img/channels4_profile.jpg" alt="Kaspersky">
+                    <h3>Eset</h3>
                 </div>
             </div>
         </section>
+
+             <!-- La Ventana Emergente (Modal) -->
+    <div id="modal-servicio" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-descripcion"></p>
+        </div>
+    </div>
+
+        
     </main>
 
     <footer>
         </footer>
 
     <script>
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.carousel-item');
+    const totalSlides = slides.length;
 
-        function showSlides() {
-            slides.forEach((slide, i) => {
-                slide.style.display = 'none';
-            });
-            slideIndex++;
-            if (slideIndex > totalSlides) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].style.display = 'block';
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
+    function showSlides() {
+        slides.forEach((slide, i) => {
+            slide.style.display = 'none';
+        });
+        slideIndex++;
+        if (slideIndex > totalSlides) {
+            slideIndex = 1;
         }
+        slides[slideIndex - 1].style.display = 'block';
+        setTimeout(showSlides, 3000); // Cambia imagen cada 3 segundos
+    }
 
-        showSlides();
+    showSlides();
     </script>
+    <!-- Scripts movidos al final para mejor rendimiento -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../components/nav.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
