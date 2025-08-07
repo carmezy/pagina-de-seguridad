@@ -53,7 +53,7 @@ async function updateNavbar() {
 
         // Añadir enlace "Mi Cuenta"
         const accountLi = document.createElement('li');
-        accountLi.innerHTML = `<a href="/views/cuenta/index.html" class="nav-link">Mi Cuenta</a>`;
+        accountLi.innerHTML = `<a href="/cuenta" class="nav-link">Mi Cuenta</a>`;
         navMenuList.appendChild(accountLi);
 
         // Añadir botón "Cerrar Sesión"
