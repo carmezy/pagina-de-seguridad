@@ -12,3 +12,127 @@
         </ul>
     </div>
 </nav>
+
+<style>
+    .navbar {
+        background-color: #333;
+        color: white;
+        padding: 1em;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .nav-logo {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-menu li {
+        margin-left: 20px;
+    }
+
+    .nav-link {
+        color: white;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        display: block;
+    }
+
+    .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .hamburger {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        position: relative;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        transition: transform 0.3s ease;
+    }
+
+    .hamburger::before {
+        top: -8px;
+    }
+
+    .hamburger::after {
+        top: 8px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .nav-toggle {
+            display: block;
+        }
+
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 60px; /* Adjust based on your navbar height */
+            left: 0;
+            background-color: #333;
+            text-align: center;
+        }
+
+        .nav-menu.active {
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin: 0;
+            border-top: 1px solid #444;
+        }
+
+        .nav-menu li:last-child {
+            border-bottom: 1px solid #444;
+        }
+
+        .nav-link {
+            padding: 1em;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    });
+</script>
