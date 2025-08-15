@@ -122,7 +122,7 @@ body {
 }
 
 .company-intro p {
-    color: #fff;
+    color: #0a0a0a;
     font-size: 20px;
     margin-bottom: 20px;
     line-height: 1.6;
@@ -130,7 +130,7 @@ body {
 
 .company-intro .call-to-action {
     font-weight: bold;
-    color: #007bff; /* Blue color for call to action */
+    color: #0a0a0a; /* Blue color for call to action */
 }
 
 .programs-section {
@@ -158,6 +158,12 @@ body {
     border-radius: 10px;
     text-align: center;
     background-color: #0a0a0a;
+}
+
+.programs-section-2 h2 {
+    font-size: 36px;
+    color: #ffd900;
+    margin-bottom: 40px;
 }
 
 .program-cards-2 {
