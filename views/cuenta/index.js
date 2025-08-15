@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (deletePlanBtn) {
         deletePlanBtn.addEventListener('click', async () => {
             try {
-                await axios.patch('/api/users/me/plan', { plan: null }, { withCredentials: true });
+                await axios.patch('/api/users/plan', { plan: null }, { withCredentials: true });
                 userPlan.textContent = 'plan no definido';
             } catch (error) {
                 console.error('Error al eliminar el plan:', error);
