@@ -105,23 +105,20 @@ usersRouters.patch('/:id/:token', async (request, response) => {
 // El middleware 'userExtractor' se encarga de la autenticación.
 usersRouters.patch('/plan', userExtractor, async (request, response) => {
     try {
-        // Obtiene el nombre del plan del cuerpo de la petición.
-        const { plan } = request.body;
-        if (!plan) {
+         // Permite que el plan sea null para eliminarlo
+        if (!('plan' in request.body)) {
             return response.status(400).json({ message: 'Plan is required' });
         }
 
-        // Obtiene el ID del usuario desde el objeto 'request' que fue poblado por 'userExtractor'.
+        const { plan } = request.body;
         const userId = request.user.id;
 
-        // Busca al usuario por su ID y actualiza su campo 'plan'.
         const updatedUser = await User.findByIdAndUpdate(
             userId, 
             { plan: plan }, 
-            { new: true } // Esta opción devuelve el documento actualizado
+            { new: true }
         );
 
-        // Si no se encuentra el usuario, devuelve un error 404.
         if (!updatedUser) {
             return response.status(404).json({ message: 'User not found' });
         }
@@ -132,6 +129,7 @@ usersRouters.patch('/plan', userExtractor, async (request, response) => {
         response.status(500).json({ message: 'Internal server error' });
     }
 });
+
 
 // Exporta el router para ser utilizado en la aplicación principal.
 module.exports = usersRouters;
